@@ -16,7 +16,7 @@ import utilities.DataProviders;
 
 public class TC_003ddtLogintest extends BaseClass{
 	
-	@Test(dataProvider= "nop")
+	@Test(dataProvider= "nop", groups = {"regression"})
 	public void test_login(String email , String pswd , String exp){
 		try {
 		HomePage hp = new HomePage(driver);

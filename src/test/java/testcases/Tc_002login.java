@@ -10,7 +10,7 @@ import testbase.BaseClass;
 
 public class Tc_002login extends BaseClass  {
 	
-	@Test
+	@Test(groups = {"functional"})
 	public void loginvalid() {
 		HomePage hp = new HomePage(driver);
 		

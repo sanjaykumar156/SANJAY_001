@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [masterSuite]">
+  <parameter name="Browser" value="edge"/>
+  <listeners>
+    <listener class-name="utilities.ExtentReportManager"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="masterTest(failed)">
+    <classes>
+      <class name="testcases.TC_003ddtLogintest">
+        <methods>
+          <include name="test_login" invocation-numbers="0 1 2 3 4"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.TC_003ddtLogintest -->
+    </classes>
+  </test> <!-- masterTest(failed) -->
+</suite> <!-- Failed suite [masterSuite] -->

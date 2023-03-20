@@ -19,7 +19,7 @@ public class BaseClass {
 	public static WebDriver driver;
 	public ResourceBundle rb;
 	
-	@BeforeClass
+	@BeforeClass(groups = {"sanity","functional","regression"})
 	@Parameters({"Browser"})
 	public void setup(String br) {
 		rb= ResourceBundle.getBundle("config");
@@ -41,7 +41,7 @@ public class BaseClass {
 		driver.get(rb.getString("appURL"));
 	}
 	
-	@AfterClass
+	@AfterClass(groups = {"sanity","functional","regression"})
 	public void teardown() {
 		driver.quit();
 	}

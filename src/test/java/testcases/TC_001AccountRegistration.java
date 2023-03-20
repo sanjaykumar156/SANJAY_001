@@ -15,7 +15,7 @@ public class TC_001AccountRegistration extends BaseClass {
 	
 	
 	
-	@Test(priority = 1)
+	@Test(priority = 1, groups = {"sanity"})
 	public void test_acc_registration () throws InterruptedException{
 		HomePage hp = new HomePage(driver);
 //		JavascriptExecutor js = (JavascriptExecutor)driver;

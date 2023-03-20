@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [masterSuite]" guice-stage="DEVELOPMENT">
-  <parameter name="Browser" value="edge"/>
+<suite parallel="tests" name="Failed suite [masterSuite]" guice-stage="DEVELOPMENT">
+  <parameter name="Browser" value="chrome"/>
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" name="masterTest(failed)">
+  <test thread-count="5" parallel="tests" name="masterTest(failed)">
+    <groups>
+      <run>
+        <include name="functional"/>
+        <include name="sanity"/>
+        <include name="regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="testcases.TC_003ddtLogintest">
+      <class name="testcases.TC_001AccountRegistration">
         <methods>
-          <include name="test_login" invocation-numbers="3"/>
-          <include name="teardown"/>
-          <include name="setup"/>
+          <include name="test_acc_registration"/>
         </methods>
-      </class> <!-- testcases.TC_003ddtLogintest -->
+      </class> <!-- testcases.TC_001AccountRegistration -->
     </classes>
   </test> <!-- masterTest(failed) -->
+  <test thread-count="5" parallel="tests" name="masterTest1(failed)">
+    <groups>
+      <run>
+        <include name="functional"/>
+        <include name="sanity"/>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testcases.Tc_002login">
+        <methods>
+          <include name="loginvalid"/>
+        </methods>
+      </class> <!-- testcases.Tc_002login -->
+    </classes>
+  </test> <!-- masterTest1(failed) -->
 </suite> <!-- Failed suite [masterSuite] -->
