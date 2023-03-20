@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-masterSuite" class="navigator-link">
-              <span class="suite-name border-passed">masterSuite</span>
+              <span class="suite-name border-failed">masterSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods, 3 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-masterSuite" class="hide-methods failed suite-masterSuite"> (hide)</a> <!-- hide-methods failed suite-masterSuite -->
+                      <a href="#" panel-name="suite-masterSuite" class="show-methods failed suite-masterSuite"> (show)</a> <!-- show-methods failed suite-masterSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-masterSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-masterSuite" title="testcases.TC_003ddtLogintest" class="method navigator-link" hash-for-method="test_login(laks@yahoo.com, xyz, invalid)">test_login(laks@yahoo.com, xyz, invalid)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-masterSuite" title="testcases.TC_003ddtLogintest" class="method navigator-link" hash-for-method="test_login(laksh@yahoo.com, Lakshmi, invalid)">test_login(laksh@yahoo.com, Lakshmi, invalid)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-masterSuite" title="testcases.TC_003ddtLogintest" class="method navigator-link" hash-for-method="test_login(abc123@gmail.com, test@123, invalid)">test_login(abc123@gmail.com, test@123, invalid)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-masterSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,27 +128,12 @@
                     <div class="method-list-content passed suite-masterSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-masterSuite" title="testcases.TC_003ddtLogintest" class="method navigator-link" hash-for-method="test_login(xyx@gmail.com, redyug, invalid)">test_login(xyx@gmail.com, redyug, invalid)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-masterSuite" title="testcases.TC_003ddtLogintest" class="method navigator-link" hash-for-method="test_login(abc@gmail.com, reeeach, invalid)">test_login(abc@gmail.com, reeeach, invalid)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-masterSuite" title="testcases.TC_003ddtLogintest" class="method navigator-link" hash-for-method="test_login(lakshmi@yahoo.com, Laxmi, invalid)">test_login(lakshmi@yahoo.com, Laxmi, invalid)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-masterSuite" title="testcases.TC_003ddtLogintest" class="method navigator-link" hash-for-method="test_login(sanjayroyal20@gmail.com, virus@123, valid)">test_login(sanjayroyal20@gmail.com, virus@123, valid)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-masterSuite" title="testcases.TC_003ddtLogintest" class="method navigator-link" hash-for-method="test_login(sdfv@gmail.com, deuis, invalid)">test_login(sdfv@gmail.com, deuis, invalid)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-masterSuite" title="testcases.TC_003ddtLogintest" class="method navigator-link" hash-for-method="test_login(sdrtyh@gmail.com, 4545, invalid)">test_login(sdrtyh@gmail.com, 4545, invalid)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-masterSuite -->
@@ -139,6 +148,53 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-masterSuite" class="panel masterSuite">
+          <div class="suite-masterSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testcases.TC_003ddtLogintest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test_login(laks@yahoo.com, xyz, invalid)">
+                  </a> <!-- test_login(laks@yahoo.com, xyz, invalid) -->
+                  <span class="method-name">test_login</span>
+                  <span class="parameters">(laks@yahoo.com, xyz, invalid)</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at testcases.TC_003ddtLogintest.test_login(TC_003ddtLogintest.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test_login(laksh@yahoo.com, Lakshmi, invalid)">
+                  </a> <!-- test_login(laksh@yahoo.com, Lakshmi, invalid) -->
+                  <span class="method-name">test_login</span>
+                  <span class="parameters">(laksh@yahoo.com, Lakshmi, invalid)</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at testcases.TC_003ddtLogintest.test_login(TC_003ddtLogintest.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test_login(abc123@gmail.com, test@123, invalid)">
+                  </a> <!-- test_login(abc123@gmail.com, test@123, invalid) -->
+                  <span class="method-name">test_login</span>
+                  <span class="parameters">(abc123@gmail.com, test@123, invalid)</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at testcases.TC_003ddtLogintest.test_login(TC_003ddtLogintest.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-masterSuite-class-failed -->
           <div class="suite-masterSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -147,18 +203,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test_login(xyx@gmail.com, redyug, invalid)">
-                  </a> <!-- test_login(xyx@gmail.com, redyug, invalid) -->
+                  <a name="test_login(lakshmi@yahoo.com, Laxmi, invalid)">
+                  </a> <!-- test_login(lakshmi@yahoo.com, Laxmi, invalid) -->
                   <span class="method-name">test_login</span>
-                  <span class="parameters">(xyx@gmail.com, redyug, invalid)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_login(abc@gmail.com, reeeach, invalid)">
-                  </a> <!-- test_login(abc@gmail.com, reeeach, invalid) -->
-                  <span class="method-name">test_login</span>
-                  <span class="parameters">(abc@gmail.com, reeeach, invalid)</span>
+                  <span class="parameters">(lakshmi@yahoo.com, Laxmi, invalid)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -167,22 +215,6 @@
                   </a> <!-- test_login(sanjayroyal20@gmail.com, virus@123, valid) -->
                   <span class="method-name">test_login</span>
                   <span class="parameters">(sanjayroyal20@gmail.com, virus@123, valid)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_login(sdfv@gmail.com, deuis, invalid)">
-                  </a> <!-- test_login(sdfv@gmail.com, deuis, invalid) -->
-                  <span class="method-name">test_login</span>
-                  <span class="parameters">(sdfv@gmail.com, deuis, invalid)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="test_login(sdrtyh@gmail.com, 4545, invalid)">
-                  </a> <!-- test_login(sdrtyh@gmail.com, 4545, invalid) -->
-                  <span class="method-name">test_login</span>
-                  <span class="parameters">(sdrtyh@gmail.com, 4545, invalid)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -255,28 +287,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test_login')
 data.setCell(0, 2, 'testcases.TC_003ddtLogintest')
-data.setCell(0, 3, 37789);
+data.setCell(0, 3, 17411);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'test_login')
 data.setCell(1, 2, 'testcases.TC_003ddtLogintest')
-data.setCell(1, 3, 37066);
+data.setCell(1, 3, 14225);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'test_login')
 data.setCell(2, 2, 'testcases.TC_003ddtLogintest')
-data.setCell(2, 3, 34380);
+data.setCell(2, 3, 381);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'test_login')
 data.setCell(3, 2, 'testcases.TC_003ddtLogintest')
-data.setCell(3, 3, 34335);
+data.setCell(3, 3, 70);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'test_login')
 data.setCell(4, 2, 'testcases.TC_003ddtLogintest')
-data.setCell(4, 3, 10389);
+data.setCell(4, 3, 37);
 window.suiteTableData['masterSuite']= { tableData: data, tableDiv: 'times-div-masterSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-masterSuite">
               </div> <!-- times-div-masterSuite -->
             </div> <!-- times-div -->
@@ -309,27 +341,33 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">test_login(sanjayroyal20@gmail.com, virus@123, valid)</span>
-                <span class="method-start">29899 ms</span>
+                <span class="method-start">37257 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">test_login(abc@gmail.com, reeeach, invalid)</span>
-                <span class="method-start">40428 ms</span>
+                <span class="method-name">test_login(lakshmi@yahoo.com, Laxmi, invalid)</span>
+                <span class="method-start">55431 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">test_login(xyx@gmail.com, redyug, invalid)</span>
-                <span class="method-start">74768 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test_login(laksh@yahoo.com, Lakshmi, invalid)</span>
+                <span class="method-start">69665 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">test_login(sdfv@gmail.com, deuis, invalid)</span>
-                <span class="method-start">111840 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test_login(laks@yahoo.com, xyz, invalid)</span>
+                <span class="method-start">70097 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">test_login(sdrtyh@gmail.com, 4545, invalid)</span>
-                <span class="method-start">149636 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test_login(abc123@gmail.com, test@123, invalid)</span>
+                <span class="method-start">70185 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">184055 ms</span>
+                <span class="method-start">70234 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

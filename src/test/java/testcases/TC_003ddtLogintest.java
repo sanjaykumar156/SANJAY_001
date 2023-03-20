@@ -16,7 +16,7 @@ import utilities.DataProviders;
 
 public class TC_003ddtLogintest extends BaseClass{
 	
-	@Test(dataProvider= "nop", groups = {"regression"})
+	@Test(dataProvider= "LoginData",dataProviderClass = DataProviders.class,  groups = {"regression"})
 	public void test_login(String email , String pswd , String exp){
 		try {
 		HomePage hp = new HomePage(driver);
@@ -61,19 +61,19 @@ public class TC_003ddtLogintest extends BaseClass{
 		
 	}
 	
-	
-	@DataProvider(name= "nop")
-	String [][] logindata(){
-		String data[][] = { {"sanjayroyal20@gmail.com" , "virus@123" , "valid"},
-		{"abc@gmail.com" ,"reeeach", "invalid"},
-		{"xyx@gmail.com" ,"redyug", "invalid" },
-		{"sdfv@gmail.com", "deuis", "invalid" },
-		{"sdrtyh@gmail.com", "4545", "invalid"}
-		
-		};
-		return data;
-		
-	}
+//	
+//	@DataProvider(name= "nop")
+//	String [][] logindata(){
+//		String data[][] = { {"sanjayroyal20@gmail.com" , "virus@123" , "valid"},
+//		{"abc@gmail.com" ,"reeeach", "invalid"},
+//		{"xyx@gmail.com" ,"redyug", "invalid" },
+//		{"sdfv@gmail.com", "deuis", "invalid" },
+//		{"sdrtyh@gmail.com", "4545", "invalid"}
+//		
+//		};
+//		return data;
+//		
+//	}
 	
 	
 		
